@@ -24,7 +24,7 @@ namespace RPGCombatKataTests
         public void BeAlive()
         {
             var character = new Character();
-            character.Alive.ShouldBe(true);
+            character.Alive.ShouldBeTrue();
         }
     }
 }
