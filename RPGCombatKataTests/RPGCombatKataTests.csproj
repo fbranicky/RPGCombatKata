@@ -59,6 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CharacterWhenCreatedShould.cs" />
+    <Compile Include="CharacterWhenTakenDamageShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

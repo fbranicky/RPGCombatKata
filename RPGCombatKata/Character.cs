@@ -20,5 +20,34 @@
             _level = StartingLevel;
             _alive = StartingAlive;
         }
+
+        public void TakeDamage(int damage)
+        {
+            damage = SanitizeDamage(damage);
+
+            if (damage >= _health)
+            {
+                _health = 0;
+                Die();
+                return;
+            }
+
+            _health -= damage;            
+        }
+
+        private int SanitizeDamage(int damage)
+        {
+            if (damage < 0)
+            {
+                damage = damage * -1;
+            }
+
+            return damage;
+        }
+
+        private void Die()
+        {
+            _alive = false;
+        }
     }
 }
